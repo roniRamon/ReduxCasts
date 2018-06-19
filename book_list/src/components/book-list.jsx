@@ -5,9 +5,10 @@ class BookList extends React.Component {
   renderList() {
     return this.props.books.map(book => (
       <li
+        onClick={()=> this.props.selectBook(book)}
         key={book.title}
         className="list-group-item">
-        {book.title}
+        {book.title}  
       </li>
     ));
   }
