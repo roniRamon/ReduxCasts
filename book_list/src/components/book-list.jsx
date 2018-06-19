@@ -3,7 +3,13 @@ import React from 'react';
 class BookList extends React.Component {
 
   renderList() {
-    return this.props.books;
+    return this.props.books.map(book => (
+      <li
+        key={book.title}
+        className="list-group-item">
+        {book.title}
+      </li>
+    ));
   }
 
   render() {
@@ -15,5 +21,7 @@ class BookList extends React.Component {
   }
 
 }
+
+
 
 export default BookList;
